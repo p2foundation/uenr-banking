@@ -12,8 +12,8 @@ import {RouterModule, Routes} from "@angular/router";
 
 export const routes: Routes = [
   {path: '', component: ProductsComponent},
-  {path: 'current-account', component: CurrentAccountsComponent},
-  {path: 'savings-account', component: SavingsAccountsComponent},
+  {path: 'current-accounts', component: CurrentAccountsComponent},
+  {path: 'savings-accounts', component: SavingsAccountsComponent},
   {path: 'fixed-deposits', component: FixedDepositsComponent},
   {path: 'credit-cards', component: CreditCardsComponent},
   {path: 'debit-cards', component: DebitCardsComponent},

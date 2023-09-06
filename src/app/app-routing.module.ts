@@ -10,7 +10,6 @@ const routes: Routes = [
   {path: 'help', loadChildren: () => import('./pages/help/help.module').then(m => m.HelpModule)},
   {path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule)},
   {path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)},
-  {path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)},
   {path: 'banking', loadChildren: () => import('./bank/bank.module').then(m => m.BankModule)},
   {path: '**', component: NotFoundComponent}
 ];
