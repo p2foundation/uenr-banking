@@ -1,6 +1,6 @@
 {
-  "name": "uenr-bankapp",
-  "version": "0.0.0",
+  "name": "uenr-banking-project",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

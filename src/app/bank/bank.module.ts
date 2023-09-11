@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
+import { LoanPaymentsComponent } from './payments/loan-payments/loan-payments.component';
+import { InvestmentsPaymentsComponent } from './payments/investments-payments/investments-payments.component';
 
 export const routes: Routes = [
   {path: 'accounts', loadChildren: ()=> import('./accounts/accounts.module').then(m => m.AccountsModule) },
@@ -11,7 +13,10 @@ export const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoanPaymentsComponent,
+    InvestmentsPaymentsComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)

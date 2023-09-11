@@ -5,9 +5,10 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './pages/home/home.component';
 import {SharedModule} from "./shared/shared.module";
 import {AboutAreaComponent} from "./pages/about-area/about-area.component";
-import { FreeTrialAreaComponent } from './pages/free-trial-area/free-trial-area.component';
-import { PartnerAreaComponent } from './pages/partner-area/partner-area.component';
-import { PricingPlanComponent } from './pages/pricing-plan/pricing-plan.component';
+import {FreeTrialAreaComponent} from './pages/free-trial-area/free-trial-area.component';
+import {PartnerAreaComponent} from './pages/partner-area/partner-area.component';
+import {PricingPlanComponent} from './pages/pricing-plan/pricing-plan.component';
+import {ContactComponent} from "./pages/contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PricingPlanComponent } from './pages/pricing-plan/pricing-plan.componen
     AboutAreaComponent,
     FreeTrialAreaComponent,
     PartnerAreaComponent,
-    PricingPlanComponent
+    PricingPlanComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

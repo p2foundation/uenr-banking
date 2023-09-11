@@ -11,7 +11,7 @@
         <ul class="topbar-action-list">
           <li><i class="fa-solid fa-location-pin"></i> University of Energy of Ghana, Sunyani</li>
           <li>
-            <i class="fa-solid fa-phone"></i> <a href="tel:233593998216">+44 587 154756</a>
+            <i class="fa-solid fa-phone"></i> <a href="tel:233593998216">+233 587 154756</a>
           </li>
           <li>
             <i class="fa-solid fa-envelope"></i> <a href="mailto:p2founda@gmail.com">support@uoe.com.gh</a>
@@ -120,12 +120,15 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/services" routerLinkActive="active" class="nav-link">Account Summary</a>
+                      <a routerLink="/banking/accounts/account-info" routerLinkActive="active" class="nav-link">Account Information</a>
                     </li>
 
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/service-details" routerLinkActive="active" class="nav-link">Transaction
+                      <a routerLink="/banking/accounts/accounts-history" routerLinkActive="active" class="nav-link">Account
                         History</a>
+                    </li>
+                    <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                      <a routerLink="/banking/accounts/open-account" routerLinkActive="active" class="nav-link">Open Account</a>
                     </li>
                   </ul>
                 </li>
@@ -136,16 +139,17 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Between Own Accounts</a>
+                      <a routerLink="/banking/transfers/between-own-accounts" routerLinkActive="active" class="nav-link">Between Own Accounts</a>
                     </li>
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Local Transfers</a>
+                      <a routerLink="/banking/transfers/local-transfers" routerLinkActive="active" class="nav-link">Local Transfers</a>
+                    </li>
+
+                    <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                      <a routerLink="/banking/transfers/manage-beneficiaries" routerLinkActive="active" class="nav-link">Manage Beneficiaries</a>
                     </li>
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog" routerLinkActive="active" class="nav-link">International Transfers</a>
-                    </li>
-                    <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog-details" routerLinkActive="active" class="nav-link">Manage Beneficiaries</a>
+                      <a routerLink="/banking/transfers/trans-history" routerLinkActive="active" class="nav-link">Transfers History</a>
                     </li>
                   </ul>
                 </li>
@@ -156,32 +160,32 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Mobile Money</a>
+                      <a routerLink="/banking/payments/mobile-money" routerLinkActive="active" class="nav-link">Mobile Money</a>
                     </li>
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Pay Bills</a>
+                      <a routerLink="/banking/payments/bill-payments" routerLinkActive="active" class="nav-link">Pay Bills</a>
                     </li>
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Credit Card Payments</a>
+                      <a routerLink="/banking/payments/cc-payments" routerLinkActive="active" class="nav-link">Credit Card Payments</a>
                     </li>
                     <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                      <a routerLink="/blog-details" routerLinkActive="active" class="nav-link">Payments History</a>
+                      <a routerLink="/banking/payments/trans-history" routerLinkActive="active" class="nav-link">Payments History</a>
                     </li>
                   </ul>
                 </li>
 
                 <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                  <a routerLink="/pages/products/loans" routerLinkActive="active" class="nav-link">Loan</a>
+                  <a routerLink="/banking/payments/loan-payments" routerLinkActive="active" class="nav-link">My Loan</a>
                 </li>
                 <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                  <a routerLink="pages/products/investments" routerLinkActive="active" class="nav-link">Invest</a>
+                  <a routerLink="/banking/payments/invests-payments" routerLinkActive="active" class="nav-link">My Investments</a>
                 </li>
               </ul>
             </li>
             <!-- / dashboard-->
 
             <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-              <a routerLink="/help" routerLinkActive="active" class="nav-link">Help</a>
+              <a routerLink="/help" routerLinkActive="active" class="nav-link">Help Desk</a>
             </li>
 
             <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
@@ -203,8 +207,8 @@
               </div>
             </div>
 
-            <a routerLink="/contact" class="btn btn-primary">Apply</a>
-            <a routerLink="/contact" class="btn btn-primary">Login</a>
+            <a routerLink="/banking/accounts/open-account" class="btn btn-primary">Apply</a>
+            <a routerLink="/banking/accounts/open-account/login-accounts" class="btn btn-primary">Login</a>
           </div>
         </div>
       </nav>
