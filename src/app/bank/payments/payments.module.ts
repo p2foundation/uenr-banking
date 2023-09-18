@@ -8,6 +8,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {CreditCardsComponent} from "../../pages/products/credit-cards/credit-cards.component";
 import {LoanPaymentsComponent} from "./loan-payments/loan-payments.component";
 import {InvestmentsPaymentsComponent} from "./investments-payments/investments-payments.component";
+import {SchoolFeesComponent} from "./school-fees/school-fees.component";
 
 export const routes: Routes = [
   {path: 'bill-payments', component: BillPaymentsComponent},
@@ -15,7 +16,8 @@ export const routes: Routes = [
   {path: 'mobile-money', component: MobileMoneyComponent},
   {path: 'trans-history', component: PaymentsHistoryComponent},
   {path: 'loan-payments', component: LoanPaymentsComponent},
-  {path: 'invests-payments', component: InvestmentsPaymentsComponent}
+  {path: 'invests-payments', component: InvestmentsPaymentsComponent},
+  {path: 'school-fees', component: SchoolFeesComponent}
 ];
 
 @NgModule({
