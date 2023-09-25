@@ -9,6 +9,9 @@ import {FreeTrialAreaComponent} from './pages/free-trial-area/free-trial-area.co
 import {PartnerAreaComponent} from './pages/partner-area/partner-area.component';
 import {PricingPlanComponent} from './pages/pricing-plan/pricing-plan.component';
 import {ContactComponent} from "./pages/contact/contact.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {AuthGuard} from "./repository/Auth/auth.guard";
 
 @NgModule({
   declarations: [
@@ -23,10 +26,13 @@ import {ContactComponent} from "./pages/contact/contact.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

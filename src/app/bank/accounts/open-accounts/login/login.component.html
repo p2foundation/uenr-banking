@@ -1,20 +1,69 @@
-<!-- Start Page Title Area -->
-<div class="page-title-area item-bg1">
+<br>
+<section class="services-details-area ptb-110">
   <div class="container">
-    <div class="page-title-content">
-      <h2>Login</h2>
+    <div class="services-details-overview">
+      <div class="services-details-image wow fadeInUp">
+        <img src="assets/img/services-details/auto-network.jpg" alt="image">
+      </div>
+
+      <div class="services-details-desc">
+        <h3>Login Form</h3>
+        <form id="authForm" [formGroup]="authForm" (ngSubmit)="onFormSubmit(authForm.value)">
+
+          <div class="form-floating mb-3">
+            <input type="text"
+                   class="form-control"
+                   id="username"
+                   formControlName="username"
+                   placeholder="e.g. yourname"
+                   required>
+            <label for="username">Username</label>
+          </div>
+
+
+          <div class="form-floating mb-3">
+            <input type="password"
+                   class="form-control"
+                   id="password"
+                   formControlName="password"
+                   placeholder="e.g. password"
+                   required>
+            <label for="password">Password (8-22 digits)</label>
+          </div>
+          <!--          <div *ngIf="airtimeForm.controls['recipientNumber'].invalid && (airtimeForm.controls['recipientNumber'].dirty || airtimeForm.controls['recipientNumber'].touched)" class="alert alert-danger">-->
+          <!--            <div *ngIf="airtimeForm.controls['recipientNumber'].errors.required">-->
+          <!--              Recipient Number is required.-->
+          <!--            </div>-->
+          <!--          </div>-->
+
+
+          <!--          <div *ngIf="airtimeForm.controls['amount'].invalid && (airtimeForm.controls['amount'].dirty || airtimeForm.controls['amount'].touched)" class="alert alert-danger">-->
+          <!--            <div *ngIf="airtimeForm.controls['amount'].errors.required">-->
+          <!--              Amount is required.-->
+          <!--            </div>-->
+          <!--          </div>-->
+
+          <button type="submit"
+
+                  class="btn btn-primary btn-sm mt-2"
+                  id="recharge">
+            Proceed
+          </button>
+<!--          <button type="button"-->
+<!--                  disabled-->
+<!--                  class="btn btn-primary btn-sm mt-2"-->
+<!--                  id="loading">-->
+<!--            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>-->
+<!--            Loading...-->
+<!--          </button>-->
+        </form><br><br>
+        <!-- <p>
+            Topup and be rewarded with royalty points on this app.
+            Points can be redeemed in form of Cash, Airtime, Data, Fuel, Bill Payment, Free Travel and many more...
+        </p> -->
+      </div>
+
+
     </div>
   </div>
-
-  <div class="lines">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-
-</div>
-<!-- End Page Title Area -->
-
-<section>
-  <!--  <p>open-accounts works!</p>-->
 </section>

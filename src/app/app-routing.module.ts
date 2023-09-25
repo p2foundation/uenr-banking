@@ -3,6 +3,7 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./pages/home/home.component";
 import {ContactComponent} from "./pages/contact/contact.component";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
+import {AuthGuard} from "./repository/Auth/auth.guard";
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -10,7 +11,7 @@ const routes: Routes = [
   {path: 'help', loadChildren: () => import('./pages/help/help.module').then(m => m.HelpModule)},
   {path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule)},
   {path: 'services', loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule)},
-  {path: 'banking', loadChildren: () => import('./bank/bank.module').then(m => m.BankModule)},
+  {path: 'banking', loadChildren: () => import('./bank/bank.module').then(m => m.BankModule) },
   {path: '**', component: NotFoundComponent}
 ];
 
@@ -21,6 +22,7 @@ const routes: Routes = [
       initialNavigation: 'enabledBlocking'
     })
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }
