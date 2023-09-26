@@ -6,6 +6,7 @@ import {LoginComponent} from "./login/login.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { RegisterComponent } from './register/register.component';
+import {AuthService} from "../../../repository/Auth/auth.service";
 
 export const routes: Routes = [
   {path: '', component: OpenAccountsComponent, pathMatch: 'full'},
@@ -25,7 +26,8 @@ export const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-  ]
+  ],
+  providers: [AuthService]
 })
 export class OpenAccountsModule {
 }

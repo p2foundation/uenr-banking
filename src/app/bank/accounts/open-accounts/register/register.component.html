@@ -15,7 +15,7 @@
                    class="form-control"
                    id="username"
                    formControlName="username"
-                   placeholder="e.g. yourname"
+                   placeholder="e.g. username"
                    required>
             <label for="username">Username</label>
           </div>
@@ -33,9 +33,9 @@
                    class="form-control"
                    id="lastName"
                    formControlName="lastName"
-                   placeholder="e.g. lastName"
+                   placeholder="e.g. Last Name"
                    required>
-            <label for="username">LastName</label>
+            <label for="lastName">Last Name</label>
           </div>
           <div class="form-floating mb-3">
             <input type="email"
@@ -44,17 +44,17 @@
                    formControlName="email"
                    placeholder="e.g. Email"
                    required>
-            <label for="username">Email</label>
+            <label for="email">Email</label>
           </div>
 
           <div class="form-floating mb-3">
-            <input type="number"
+            <input type="text"
                    class="form-control"
                    id="phoneNumber"
                    formControlName="phoneNumber"
                    placeholder="e.g. Phone Number"
                    required>
-            <label for="username">Phone Number</label>
+            <label for="phoneNumber">Phone Number</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -62,9 +62,9 @@
                    class="form-control"
                    id="password"
                    formControlName="password"
-                   placeholder="e.g. password"
+                   placeholder="e.g. Password"
                    required>
-            <label for="password">Password (8-22 min-max)</label>
+            <label for="password">Password (8-22 length)</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -74,7 +74,7 @@
                    formControlName="retypedPassword"
                    placeholder="e.g. retypedPassword"
                    required>
-            <label for="retypedPassword">Retype Password</label>
+            <label for="retypedPassword">Retype Password (8-22 length)</label>
           </div>
           <!--          <div *ngIf="airtimeForm.controls['recipientNumber'].invalid && (airtimeForm.controls['recipientNumber'].dirty || airtimeForm.controls['recipientNumber'].touched)" class="alert alert-danger">-->
           <!--            <div *ngIf="airtimeForm.controls['recipientNumber'].errors.required">-->
@@ -90,7 +90,6 @@
           <!--          </div>-->
 
           <button type="submit"
-
                   class="btn btn-primary btn-sm mt-2"
                   id="register">
             Proceed

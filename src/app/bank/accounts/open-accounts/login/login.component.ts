@@ -52,13 +52,18 @@ export class LoginComponent implements OnInit {
           console.log(`storing res.token ==>`);
           localStorage.setItem('token', res.token);
 
+          alert(`login successfully`);
           this.router.navigate(['banking/accounts/account-info']);
+
+        } else {
+          console.log('login response >>>', res);
+          alert(`status: 401, statusText: 'Unauthorized'`);
         }
       }, (err) => {
-        console.error(`LoginPageComponent: Error login => ${err}`);
+        console.error(`LoginPageComponent: Error login => ${JSON.stringify(err)}`);
         this.isLoadingResults = false;
         this.errorMsg = err.message;
-        alert(err.message);
+        alert(`Login error: ${JSON.stringify(err)}`);
       });
   }
 
@@ -70,7 +75,6 @@ export class LoginComponent implements OnInit {
   gotoRegisterPage() {
     this.router.navigateByUrl('/banking/accounts/open-account/register-accounts');
   }
-
 
 
 }

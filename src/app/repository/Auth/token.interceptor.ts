@@ -43,7 +43,7 @@ export class TokenInterceptor {
       catchError((error: HttpErrorResponse) => {
         console.log(`Auth Login Error intercept: ${JSON.stringify(error)}`);
         if (error.status === 401) {
-          this.router.navigate(['bank/login']);
+          this.router.navigate(['/banking/accounts/open-account/login-accounts']);
         }
         if (error.status === 400) {
           const errorMsg = error.error;

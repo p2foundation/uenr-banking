@@ -15,11 +15,10 @@
                    class="form-control"
                    id="username"
                    formControlName="username"
-                   placeholder="e.g. yourname"
+                   placeholder="e.g. Enter your username"
                    required>
             <label for="username">Username</label>
           </div>
-
 
           <div class="form-floating mb-3">
             <input type="password"
@@ -28,7 +27,7 @@
                    formControlName="password"
                    placeholder="e.g. password"
                    required>
-            <label for="password">Password (8-22 digits)</label>
+            <label for="password">Password (8-22 length)</label>
           </div>
           <!--          <div *ngIf="airtimeForm.controls['recipientNumber'].invalid && (airtimeForm.controls['recipientNumber'].dirty || airtimeForm.controls['recipientNumber'].touched)" class="alert alert-danger">-->
           <!--            <div *ngIf="airtimeForm.controls['recipientNumber'].errors.required">-->
@@ -44,9 +43,8 @@
           <!--          </div>-->
 
           <button type="submit"
-
                   class="btn btn-primary btn-sm mt-2"
-                  id="recharge">
+                  id="login">
             Proceed
           </button>
 <!--          <button type="button"-->

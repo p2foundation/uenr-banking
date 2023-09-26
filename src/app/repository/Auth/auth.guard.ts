@@ -1,33 +1,34 @@
-import {Injectable} from "@angular/core";
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from "@angular/router";
+import { Injectable } from '@angular/core';
+import { CanActivate, CanActivateChild, CanDeactivate, CanLoad, Router } from '@angular/router';
 import {AuthService} from "./auth.service";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) { }
+export class AuthGuard implements CanActivate, CanActivateChild, CanLoad  {
+  constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    const url: string = state.url;
-    console.log('authGuard URL: ', url);
-
-    return this.checkLogin(url);
+  canActivate(): boolean {
+    return this.checkAuth();
   }
 
-  checkLogin(url: string): boolean {
-    if (this.authService.isLoggedIn) {
-      return true;
-    }
-    // Store the attempted URL for redirecting
-    // this.authService.redirectUrl = url;
+  canActivateChild(): boolean {
+    return this.checkAuth();
+  }
 
-    // Navigate to the login page with extras
-    this.router.navigate(['/banking/accounts/open-account/login-accounts']);
-    return false;
+
+  canLoad(): boolean {
+    return this.checkAuth();
+  }
+
+  private checkAuth(): boolean {
+    if (this.authService.isAuthenticatedUser()) {
+      return true;
+    } else {
+      // Redirect to the login page if the user is not authenticated
+      this.router.navigate(['/banking/accounts/open-account/login-accounts']);
+      return false;
+    }
   }
 
 }

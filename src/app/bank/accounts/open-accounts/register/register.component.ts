@@ -12,12 +12,14 @@ export class RegisterComponent implements OnInit{
 
   registerForm: FormGroup;
   isLoadingResults = false;
+  username = '';
   firstName = '';
   lastName = '';
   phoneNumber = '';
   email = '';
   password = '';
   retypedPassword = '';
+
   isLoading = true;
 
   public loadingMsg = '';
@@ -51,12 +53,13 @@ export class RegisterComponent implements OnInit{
     this.authService.register(form)
       .subscribe(res => {
         console.log(`register new user response ==> ${JSON.stringify(res)}`);
+        console.error('register error msg ==>'+ res.status);
         this.isLoading = false;
         this.router.navigate(['banking/accounts/account-info']);
       }, (err) => {
         console.log(err);
         this.isLoading = false;
-        alert(err.error);
+        // alert(err.error);
       });
   }
 
