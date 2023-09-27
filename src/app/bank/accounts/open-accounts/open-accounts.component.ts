@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {AuthService} from "../../../repository/Auth/auth.service";
@@ -8,7 +8,7 @@ import {AuthService} from "../../../repository/Auth/auth.service";
   templateUrl: './open-accounts.component.html',
   styleUrls: ['./open-accounts.component.scss']
 })
-export class OpenAccountsComponent {
+export class OpenAccountsComponent implements OnInit {
   accountForm: FormGroup;
   userId: any = '';
   isLoadingResults = false;
@@ -29,7 +29,6 @@ export class OpenAccountsComponent {
       description: [null, Validators.required],
       accountType: [null, Validators.required],
     });
-    // console.log('returnUrl: ', this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/');
 
   }
 

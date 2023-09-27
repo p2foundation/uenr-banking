@@ -9,6 +9,7 @@ import {CreditCardsComponent} from "../../pages/products/credit-cards/credit-car
 import {LoanPaymentsComponent} from "./loan-payments/loan-payments.component";
 import {InvestmentsPaymentsComponent} from "./investments-payments/investments-payments.component";
 import {SchoolFeesComponent} from "./school-fees/school-fees.component";
+import {AuthGuard} from "../../repository/Auth/auth.guard";
 
 export const routes: Routes = [
   {path: 'bill-payments', component: BillPaymentsComponent},
@@ -17,7 +18,7 @@ export const routes: Routes = [
   {path: 'trans-history', component: PaymentsHistoryComponent},
   {path: 'loan-payments', component: LoanPaymentsComponent},
   {path: 'invests-payments', component: InvestmentsPaymentsComponent},
-  {path: 'school-fees', component: SchoolFeesComponent}
+  {path: 'school-fees', component: SchoolFeesComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

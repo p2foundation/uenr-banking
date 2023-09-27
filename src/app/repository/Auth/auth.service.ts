@@ -16,7 +16,10 @@ export class AuthService {
   constructor(
     private http: HttpClient,
   ) {
-    this.isAuthenticated = !!localStorage.getItem('token');
+    const rtoken = !!localStorage.getItem('token');
+    console.log(`get token ===> ${rtoken}`);
+    this.isAuthenticated = rtoken
+    console.debug(`isAuthenticated ==> ${this.isAuthenticated}`);
   }
 
   isAuthenticatedUser(): boolean {
@@ -33,7 +36,7 @@ export class AuthService {
     return this.http.post<any>(this.authURL + '/auth/login', userData)
       .pipe(
         tap(_ => {
-          this.isLoggedIn = true;
+          // this.isLoggedIn = true;
           this.isAuthenticated = true;
         }),
         catchError(this.handleError('login', []))

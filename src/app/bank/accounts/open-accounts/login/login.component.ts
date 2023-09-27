@@ -52,7 +52,6 @@ export class LoginComponent implements OnInit {
           console.log(`storing res.token ==>`);
           localStorage.setItem('token', res.token);
 
-          alert(`login successfully`);
           this.router.navigate(['banking/accounts/account-info']);
 
         } else {

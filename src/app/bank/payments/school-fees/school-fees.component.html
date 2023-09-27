@@ -1,24 +1,128 @@
 <!-- Start Page Title Area -->
-<div class="page-title-area item-bg1">
-  <div class="container">
-    <div class="page-title-content">
-      <h2>School Fees Payments</h2>
-    </div>
-  </div>
+<!--<div class="page-title-area item-bg1">-->
+<!--  <div class="container">-->
+<!--    <div class="page-title-content">-->
+<!--      <h2>School Fees Payments</h2>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="lines">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
+<!--  <div class="lines">-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--    <div class="line"></div>-->
+<!--  </div>-->
 
-</div>
+<!--</div>-->
 <!-- End Page Title Area -->
 
 
-<section>
-  <p>school-fees works!</p>
+<br>
+<section class="services-details-area ptb-110">
+  <div class="container">
+    <div class="services-details-overview">
+      <div class="services-details-image wow fadeInUp">
+        <img src="assets/img/services-details/auto-network.jpg" alt="image">
+      </div>
 
+      <div class="services-details-desc">
+        <h3>Payment Form</h3>
+        <form>
+
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="paymentType" aria-label="Floating label select example" formControlName="paymentType">
+              <!-- <option selected>Select Network</option>
+              <option value="0">Auto Detect</option> -->
+              <option>Select Payment Type</option>
+              <option value="school">School Fees</option>
+              <option value="graduation">Graduation Fees</option>
+              <option value="exams">Exams Fees</option>
+
+            </select>
+            <label for="paymentType">Payment Type</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text"
+                   class="form-control"
+                   id="studentId"
+                   formControlName="studentId"
+                   placeholder="e.g. enter student ID "
+                   required>
+            <label for="studentId">Student Id</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="program" aria-label="Floating label select example" formControlName="program">
+              <!-- <option selected>Select Network</option>
+              <option value="0">Auto Detect</option> -->
+              <option>Select School Program</option>
+              <option value="computer">Computer Engineering</option>
+              <option value="electrical">Electrical Engineering</option>
+              <option value="business">Business Administration</option>
+              <option value="Petroleum">Petroleum</option>
+
+            </select>
+            <label for="program">Payment Type</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text"
+                   class="form-control"
+                   id="description"
+                   formControlName="description"
+                   placeholder="e.g. describe your account"
+                   required>
+            <label for="description">Description</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text"
+                   class="form-control"
+                   id="amount"
+                   formControlName="amount"
+                   placeholder="e.g. 1000.000"
+                   required>
+            <label for="amount">Amount</label>
+          </div>
+
+
+          <!--          <div *ngIf="airtimeForm.controls['recipientNumber'].invalid && (airtimeForm.controls['recipientNumber'].dirty || airtimeForm.controls['recipientNumber'].touched)" class="alert alert-danger">-->
+          <!--            <div *ngIf="airtimeForm.controls['recipientNumber'].errors.required">-->
+          <!--              Recipient Number is required.-->
+          <!--            </div>-->
+          <!--          </div>-->
+
+
+          <!--          <div *ngIf="airtimeForm.controls['amount'].invalid && (airtimeForm.controls['amount'].dirty || airtimeForm.controls['amount'].touched)" class="alert alert-danger">-->
+          <!--            <div *ngIf="airtimeForm.controls['amount'].errors.required">-->
+          <!--              Amount is required.-->
+          <!--            </div>-->
+          <!--          </div>-->
+
+          <button type="submit"
+                  class="btn btn-primary btn-sm mt-2"
+                  id="payment">
+            Proceed
+          </button>
+          <!--          <button type="button"-->
+          <!--                  disabled-->
+          <!--                  class="btn btn-primary btn-sm mt-2"-->
+          <!--                  id="loading">-->
+          <!--            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>-->
+          <!--            Loading...-->
+          <!--          </button>-->
+        </form>
+        <br><br>
+        <!-- <p>
+            Topup and be rewarded with royalty points on this app.
+            Points can be redeemed in form of Cash, Airtime, Data, Fuel, Bill Payment, Free Travel and many more...
+        </p> -->
+      </div>
+
+
+    </div>
+  </div>
 </section>
 
 
