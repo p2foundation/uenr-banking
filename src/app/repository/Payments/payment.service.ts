@@ -5,7 +5,7 @@ import {catchError, Observable, of, tap} from "rxjs";
 @Injectable({
   providedIn: "root"
 })
-export class SchoolPayment {
+export class PaymentService {
   private payURL: string = 'http://localhost:1817';
 
 
@@ -18,7 +18,7 @@ export class SchoolPayment {
 
   }
 
-  public makeSchoolPayments(pData: any): Observable<any> {
+  public makePayments(pData: any): Observable<any> {
     console.log('payment prams ==>', pData);
     return this.http
       .post<any>(`${this.payURL}/payment/makepayments`, pData)

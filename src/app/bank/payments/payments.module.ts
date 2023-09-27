@@ -3,13 +3,14 @@ import {CommonModule} from '@angular/common';
 import {PaymentsHistoryComponent} from './payments-history/payments-history.component';
 import {MobileMoneyComponent} from './mobile-money/mobile-money.component';
 import {BillPaymentsComponent} from './bill-payments/bill-payments.component';
-import {CreditCardPaymentsComponent} from './credit-card-payments/credit-card-payments.component';
 import {RouterModule, Routes} from "@angular/router";
 import {CreditCardsComponent} from "../../pages/products/credit-cards/credit-cards.component";
 import {LoanPaymentsComponent} from "./loan-payments/loan-payments.component";
 import {InvestmentsPaymentsComponent} from "./investments-payments/investments-payments.component";
 import {SchoolFeesComponent} from "./school-fees/school-fees.component";
 import {AuthGuard} from "../../repository/Auth/auth.guard";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 export const routes: Routes = [
   {path: 'bill-payments', component: BillPaymentsComponent},
@@ -23,14 +24,19 @@ export const routes: Routes = [
 
 @NgModule({
   declarations: [
-    PaymentsHistoryComponent,
-    MobileMoneyComponent,
     BillPaymentsComponent,
-    CreditCardPaymentsComponent
+    MobileMoneyComponent,
+    PaymentsHistoryComponent,
+    LoanPaymentsComponent,
+    InvestmentsPaymentsComponent,
+    SchoolFeesComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PaymentsModule {

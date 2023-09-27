@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit{
 
   registerForm: FormGroup;
   isLoadingResults = false;
+
   username = '';
   firstName = '';
   lastName = '';

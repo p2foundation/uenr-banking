@@ -12,6 +12,8 @@ import {ContactComponent} from "./pages/contact/contact.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AuthGuard} from "./repository/Auth/auth.guard";
+import {AuthService} from "./repository/Auth/auth.service";
+import {PaymentService} from "./repository/Payments/payment.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import {AuthGuard} from "./repository/Auth/auth.guard";
     ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AuthGuard],
+  providers: [PaymentService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

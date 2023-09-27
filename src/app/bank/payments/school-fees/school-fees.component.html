@@ -26,14 +26,13 @@
 
       <div class="services-details-desc">
         <h3>Payment Form</h3>
-        <form>
-
+        <form id="payForm" [formGroup]="payForm" (ngSubmit)="(onPaymentSubmit(payForm.value))">
 
           <div class="form-floating mb-3">
             <select class="form-select" id="paymentType" aria-label="Floating label select example" formControlName="paymentType">
               <!-- <option selected>Select Network</option>
               <option value="0">Auto Detect</option> -->
-              <option>Select Payment Type</option>
+<!--              <option>Select Payment Type</option>-->
               <option value="school">School Fees</option>
               <option value="graduation">Graduation Fees</option>
               <option value="exams">Exams Fees</option>
@@ -63,7 +62,7 @@
               <option value="Petroleum">Petroleum</option>
 
             </select>
-            <label for="program">Payment Type</label>
+            <label for="program">School Program</label>
           </div>
 
           <div class="form-floating mb-3">
